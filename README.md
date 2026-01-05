@@ -106,16 +106,3 @@ The ERD includes:
 
 ### Query 1: Retrieve Booking Information (INNER JOIN)
 Retrieves booking details along with customer name and vehicle name.
-
-```sql
-SELECT
-  bookings.id AS booking_id,
-  users.name AS customer_name,
-  vehicles.vehicle_name,
-  bookings.rent_start,
-  bookings.rent_end,
-  bookings.status
-FROM
-  bookings
-INNER JOIN users ON bookings.user_id = users.id
-INNER JOIN vehicles ON bookings.vehicle_id = vehicles.id;
